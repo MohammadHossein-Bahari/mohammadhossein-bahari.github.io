@@ -1,0 +1,86 @@
+{% include base_path %}
+
+{% if post.header.teaser %}
+  {% capture teaser %}{{ post.header.teaser }}{% endcapture %}
+{% else %}
+  {% assign teaser = site.teaser %}
+{% endif %}
+
+{% if post.id %}
+  {% assign title = post.title | markdownify | remove: "<p>" | remove: "</p>" %}
+{% else %}
+  {% assign title = post.title %}
+{% endif %}
+
+<div class="{{ include.type | default: "list" }}__item">
+  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+    {% if include.type == "grid" and teaser %}
+      <div class="archive__item-teaser">
+        <img src=
+          {% if teaser contains "://" %}
+            "{{ teaser }}"
+          {% else %}
+            "{{ teaser | prepend: "/images/" | prepend: base_path }}"
+          {% endif %}
+          alt="">
+      </div>
+    {% endif %}
+
+    {% if post.type == 'update' %}
+      <p class="page__meta"><i class="fa fa-fw fa-calendar" aria-hidden="true"></i> {{ post.date | date: '%B %Y' }}</p>
+      <p style="margin-top: 0;">{{ title }}</p>
+      <p class="archive__item-excerpt" itemprop="description">{{ post.excerpt | markdownify }}</p>
+    {% else %}
+    <h3 class="archive__item-title" itemprop="headline">
+      {% if post.link %}
+        <a href="{{ post.link }}">{{ title }}</a> <a href="{{ base_path }}{{ post.url }}" rel="permalink"><i class="fa fa-link" aria-hidden="true" title="permalink"></i><span class="sr-only">Permalink</span></a>
+      {% elsif post.paperurl %}
+        <a href="{{ post.paperurl }}" rel="permalink" target="_blank">{{ title }}</a>
+      {% else %}
+        <a href="{{ base_path }}{{ post.url }}" rel="permalink">{{ title }}</a>
+      {% endif %}
+    </h3>
+    {% endif %}
+
+    {% if post.collection == 'teaching' %}
+      <p class="page__meta"><i class="fa fa-fw fa-calendar" aria-hidden="true"></i> {{ post.semester }}</p> 
+      <p class="archive__item-excerpt" itemprop="description"><i class="fa fa-fw fa-map-marker" aria-hidden="true"></i> {{ post.venue }}</p>
+    {% endif %}
+
+    {% if post.collection == 'publications' %}
+      <p class="archive__item-excerpt" itemprop="description" style="margin: 0;">
+        {{ post.authors | markdownify | remove: '<p>' | remove: '</p>'}}<br/>
+        <strong>{{ post.venue | markdownify | remove: '<p>' | remove: '</p>'}}</strong>, {{ post.date | date: '%B %Y' }}<br/>
+        {% if post.pdf %}
+        <a href="{{ post.pdf }}" style="color: salmon;" target="_blank"><strong>Paper</strong></a>
+        {% endif %}
+        {% if post.code %}
+        <a href="{{ post.code }}" style="color: seagreen;" target="_blank"><strong>Code</strong></a>
+        {% endif %}
+        {% if post.data %}
+        <a href="{{ post.data }}" style="color: darkviolet;" target="_blank"><strong>Data</strong></a>
+        {% endif %}
+        {% if post.slides %}
+        <a href="{{ post.slides }}" style="color: steelblue;" target="_blank"><strong>Slides</strong></a>
+        {% endif %}
+        <br/>
+        {{ post.excerpt | markdownify | remove: '<p>' | remove: '</p>'}}
+      </p>
+    {% endif %}
+
+    <!-- {% if post.excerpt and site.read_more != 'enabled' %}
+    <p class="archive__item-excerpt" itemprop="description">{{ post.excerpt | markdownify }}</p>
+    {% elsif post.excerpt and site.read_more == 'enabled' %}
+    <p class="archive__item-excerpt" itemprop="description"><p>{{ post.excerpt | markdownify | remove: '<p>' | remove: '</p>' }}<strong><a href="{{ base_path }}{{ post.url }}" rel="permalink"> Read more</a></strong></p></p>
+    {% endif %} -->
+    
+    <!-- {% if post.citation and post.paperurl %}
+      <p>Recommended citation: {{ post.citation }} <a href="{{ post.paperurl }}"><u>{{ post.paperurl }}</u></a></p>
+    {% elsif post.citation %}
+      <p>Recommended citation: {{ post.citation }} </p>
+    {% elsif post.paperurl %}
+      <p>Download <a href=" {{ post.paperurl }} "><u>here</u></a></p>
+    {% endif %} -->
+
+  </article>
+</div>
