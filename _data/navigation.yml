@@ -9,11 +9,11 @@ main:
   - title: "Resume"
     url: /resume/
  
-  - title: "Teaching"
-    url: /teaching/ 
-    
-  - title: "Blog"
-    url: /blog/
+#  - title: "Teaching"
+#    url: /teaching/
+#
+#  - title: "Blog"
+#    url: /blog/
        
   - title: "Contact"
     url: /contact/
