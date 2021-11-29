@@ -8,13 +8,13 @@ redirect_from:
   - /about.html
 ---
 
-I'm a EDEE PhD student in [EPFL](https://www.epfl.ch/en/) and a research assistant at [VITA](https://www.epfl.ch/labs/vita/).
+I'm an EDEE PhD student in [EPFL](https://www.epfl.ch/en/) and a research assistant at [VITA](https://www.epfl.ch/labs/vita/) under supervision of [Alexandre Alahi](https://people.epfl.ch/alexandre.alahi?lang=en). I recieved my master's degree in Electrical engineering from [Sharif university of technology](https://en.sharif.edu/). 
 
 
-My research interest revolves around ...
+My research interest revolves around generalizable neural networks,  causal learning, knowledge-driven networks, and visual reasoning. I pursue these topics in the application of vehicle behavior prediction for self-driving cars. 
 
 
-I am open for any types of collaborations :)
+I am open for any types of collaborations. Fell free to drop me a massage :)
 
 # News
 
