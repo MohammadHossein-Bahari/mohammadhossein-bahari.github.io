@@ -8,12 +8,10 @@ redirect_from:
   - /about.html
 ---
 
-I'm a research scientist in the [VITA lab @ EPFL](https://www.epfl.ch/labs/vita/), passionate about developing applied AI solutions. 
-I did my PhD under the supervision of [Alexandre Alahi](https://people.epfl.ch/alexandre.alahi?lang=en) and recieved my master's and bachelor's degrees in Electrical engineering from [Sharif university of technology](https://en.sharif.edu/). 
+I'm passionate about AI, with several years of experience in developing cutting-edge AI solutions for leading companies such as Honda and Valeo. My expertise lies in Generative AI (LLMs, VLMs), robustness, and generalization.
+I earned my PhD under the supervision of [Alexandre Alahi](https://people.epfl.ch/alexandre.alahi?lang=en) at [EPFL](https://www.epfl.ch/en/) and received my master’s and bachelor’s degrees in Electrical engineering from [Sharif university of technology](https://en.sharif.ir/).
 
-My PhD thesis, conducted in collaboration with [Honda](https://www.honda.com/), investigates the generalization of autonomous robotic systems. During my PhD, I completed a six-month research internship at [Five AI](https://www.five.ai/) (now acquired by Bosch), a leading company in self-driving technology in the UK.
-
-I am looking for great teams to join. Feel free to drop me a massage if you know one :)
+I’ve contributed to several AI projects that involved adapting large language models (LLMs) to NLP-specific tasks and Retrieval-Augmented Generation Systems (RAGs), as well as designing vision-based solutions using foundation models. During my Ph.D. at VITA, EPFL, my work focused on the robustness and explainability of machine learning models in the context of autonomous driving. I developed methodologies using adversarial attacks, synthetic data generation, and parametric perturbations to evaluate and interpret model performance. I also explored knowledge-based AI approaches and formal certification techniques to enhance model reliability. Additionally, during a six-month internship at [Five AI](https://www.five.ai/) (now acquired by Bosch) in Oxford, I worked on counterfactual-based explainable AI methods. 
 
 # News
 
